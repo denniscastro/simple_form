@@ -39,8 +39,8 @@ module SimpleForm
         render_collection(
           attribute, collection, value_method, text_method, options, html_options
         ) do |value, text, default_html_options|
-          radio_button(attribute, value, default_html_options) +
-            label(sanitize_attribute_name(attribute, value), text, :class => "collection_radio")
+          label(sanitize_attribute_name(attribute, value), text, :class => "collection_radio") +
+            radio_button(attribute, value, default_html_options)
         end
       end
 
@@ -83,8 +83,8 @@ module SimpleForm
         ) do |value, text, default_html_options|
           default_html_options[:multiple] = true
 
-          check_box(attribute, default_html_options, value, '') +
-            label(sanitize_attribute_name(attribute, value), text, :class => "collection_check_boxes")
+            label(sanitize_attribute_name(attribute, value), text, :class => "collection_check_boxes") + 
+            check_box(attribute, default_html_options, value, '')
         end
       end
 
