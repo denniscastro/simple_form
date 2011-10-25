@@ -83,7 +83,7 @@ module SimpleForm
         ) do |value, text, default_html_options|
           default_html_options[:multiple] = true
 
-            label(sanitize_attribute_name(attribute, value), text, :class => "collection_check_boxes") + </br>
+            label(sanitize_attribute_name(attribute, value), text, :class => "collection_check_boxes") + <br/>
             check_box(attribute, default_html_options, value, '')
         end
       end
